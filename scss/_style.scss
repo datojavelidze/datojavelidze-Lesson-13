@@ -1,0 +1,97 @@
+
+body{
+    font-family: $main-font;
+}
+    section{
+        padding: 50px 5px;
+
+        .container{ 
+            
+            @include flex-props;
+            max-width: $main-container;
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(246, 248, 248);
+            
+            .left-div{
+
+                width: 520px;
+
+                h4{
+                    font-size: 14px;
+                    color:$primary-color;
+                    font-weight:bold;
+                    text-transform:uppercase;
+                    margin-bottom: 15px;
+                }
+                h2{
+                    font-size: $main-title;
+                    font-weight: 800;
+                    line-height: 50px;
+                    margin-bottom: 45px;
+                }
+                .civ{
+                    @include flex-props(center, flex-start);
+                    .img-1{
+                        width: 50px;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                    }
+                    .john{
+                        @include flex-props(center, space-between, column);
+                        margin-bottom: 35px;
+
+                        span{
+                            &:first-of-type{
+                                font-size: 20px;
+                                font-weight: bold;
+                                text-transform:capitalize;
+                                margin-bottom: 10px;
+                            }
+                            &:last-of-type{
+                                font-size: 10px;
+                                color: grey;
+                            }
+                            
+                        }
+                    }
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 500;
+                }
+            }
+            .img-2{
+                max-width:550px;
+                max-height: 500px;
+                height: 100%;
+                width: 100%;
+            }
+
+            @media (max-width:1080px){
+                width: 90%;
+                
+                .left-div{
+                    width: 450px;
+                    margin-right: 10px;
+                }
+                .img-2{
+                    max-width: 420px;
+                }
+            }
+            @media(max-width:760px){
+                width: 100%;
+               flex-direction: column;
+               .left-div{
+                margin-bottom: 15px;
+               }
+            }
+            @media(max-width:470px){
+              .left-div{
+                width: 300px;
+              }
+            }
+        }
+
+    }
